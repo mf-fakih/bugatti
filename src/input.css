@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Gondens DEMO";
+  src: url('Gondens DEMO.otf') format('truetype');
+}
+
+body {
+  font-family: 'Gondens DEMO', 'Poppins';
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-gondens: "Gondens DEMO", sans-serif;
+
+  --color-primary-start: #783800;
+  --color-primary-end: #DE6800;
+  --color-secondary: #783800;
+}
+
+@utility bg-primary {
+  background-image: linear-gradient(to right, var(--color-primary-start), var(--color-primary-end));
+}
+
+@utility text-primary {
+  background-image: linear-gradient(to bottom, var(--color-primary-start), var(--color-primary-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-secondary {
+  color: var(--color-secondary);
+}
